@@ -1,0 +1,223 @@
+:root {
+    --white-ac: #e6e6e6;
+    --black-ac: #000000;
+    --red-ac: #b50020;
+    --other-red: #9D0208;
+    --light-black: #252526;
+    --dark-grey: #333333;
+
+    --greetings-size: 60px;
+    --projects-section-size: 35px;
+    --projects-description-size: 22px;
+    --projects-teaser-size: 20px;
+    --contacts-size: 35px;
+    --icon-description-size: 25px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--light-black);
+    font-family: Rubik, sans-serif;
+}
+
+nav#navbar {
+    /* Position */
+    position: fixed;
+    max-width: 100%;
+    width: 100%;
+    top: 0px;
+
+    background-color: var(--red-ac) !important;
+
+    div.container-fluid {
+
+        div#navbarSupportedContent {
+
+            ul.navbar-nav {
+
+                li.nav-item {
+
+                    a {
+                        text-decoration: none;
+                        color: var(--white-ac);
+                        letter-spacing: 2px;
+                        font-size: 20px;
+                        padding: 15px;
+                    }
+
+                    a:hover {
+                        background-color: var(--dark-grey);
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+#welcome-section {
+    height: 100vh;
+    background-color: var(--light-black);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    #welcome-div {
+        text-align: center;
+        color: var(--white-ac);
+        font-size: var(--greetings-size);
+
+        h1 {
+            letter-spacing: 4px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-family: Inconsolata, sans-serif;
+            margin-top: 0;
+        }
+    }
+}
+
+h2.title-section {
+    text-align: center;
+    color: var(--white-ac);
+    letter-spacing: 2px;
+    font-size: var(--projects-section-size);
+}
+
+p.teaser {
+    text-align: center;
+    color: var(--white-ac);
+    letter-spacing: 2px;
+    font-size: var(--projects-teaser-size);
+    margin-top: 35px;
+}
+
+#projects {
+    background-color: var(--dark-grey);
+    padding-top: 40px;
+    padding-bottom: 35px;
+
+    div#projects-flex-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        max-width: 100%;
+
+        .flex-item {
+            border: 3px solid var(--other-red);
+            background-color: var(--other-red);
+            margin: 20px;
+
+            transition: box-shadow 0.3s ease-in-out;
+
+            a {
+                display: block;
+
+                img {
+                    display: block;
+                    width: 400px;
+                    max-width: 100%;
+                    height: 300px;
+                    object-fit: cover;
+                }
+
+                img.cover-positioning {
+                    object-position: 0%;
+                }
+            }
+
+            p {
+                text-align: center;
+                font-family: Inconsolata, sans-serif;
+                font-size: var(--projects-description-size);
+                margin: 0;
+                padding: 12px;
+                background-color: var(--other-red);
+                color: var(--white-ac);
+            }
+        }
+
+        .flex-item:hover {
+            box-shadow: 10px 10px 5px black;
+        }
+
+    }
+}
+
+#certifications {
+    padding-top: 40px;
+    padding-bottom: 35px;
+
+    div#certifications-flex-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 50px;
+        padding: 30px;
+        padding-top: 15px;
+
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+#contacts {
+    background-color: var(--white-ac);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    padding-bottom: 40px;
+    width: 100%;
+    max-width: 100%;
+
+    h2 {
+        padding-top: 30px;
+        font-size: var(--contacts-size);
+        text-align: center;
+    }
+
+    .contacts-container {
+
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+
+        .icon-links {
+            color: var(--red-ac);
+            text-decoration: none;
+
+            font-size: var(--icon-description-size);
+            margin-left: 20px;
+            margin-right: 20px;
+
+            transition: transform 0.3s ease-out;
+        }
+
+        .icon-links:hover {
+            transform: scale(1.2);
+          }
+    }
+}
+
+footer {
+    background-color: var(--red-ac);
+
+    padding: 15px;
+
+}
