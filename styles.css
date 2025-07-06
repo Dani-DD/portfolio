@@ -94,6 +94,7 @@ h2.title-section {
     color: var(--white-ac);
     letter-spacing: 2px;
     font-size: var(--projects-section-size);
+    margin-bottom: 20px;
 }
 
 p.teaser {
@@ -119,26 +120,12 @@ p.teaser {
             border: 3px solid var(--other-red);
             background-color: var(--other-red);
             margin: 20px;
+            margin-bottom: 60px;
 
-            transition: box-shadow 0.3s ease-in-out;
-
-            a {
-                display: block;
-
-                img {
-                    display: block;
-                    width: 400px;
-                    max-width: 100%;
-                    height: 300px;
-                    object-fit: cover;
-                }
-
-                img.cover-positioning {
-                    object-position: 0%;
-                }
-            }
-
-            p {
+            /* transition: box-shadow 0.3s ease-in-out; */
+           
+            p.project-title {
+                text-transform: uppercase;
                 text-align: center;
                 font-family: Inconsolata, sans-serif;
                 font-size: var(--projects-description-size);
@@ -147,11 +134,53 @@ p.teaser {
                 background-color: var(--other-red);
                 color: var(--white-ac);
             }
+
+            iframe {
+                display: block;
+                width: 400px;
+                max-width: 100%;
+                height: 300px;
+                object-fit: cover; 
+            }
+
+            img {
+                display: block;
+                width: 400px;
+                max-width: 100%;
+                height: 300px;
+                object-fit: cover;
+            }
+
+            img.cover-positioning {
+                object-position: 0%;
+            }
+
+            div.resources {
+                p {
+                    text-align: center;
+                    font-family: Inconsolata, sans-serif;
+                    font-size: 20px;
+                    margin: 0;
+                    padding: 12px;
+                }
+
+                a {
+                    display: block;
+                    color: var(--white-ac);
+                    text-decoration: none;
+                }
+
+                a:hover { 
+                    color: black;
+                }
+            }
+
+   
         }
 
-        .flex-item:hover {
+        /* .flex-item:hover {
             box-shadow: 10px 10px 5px black;
-        }
+        } */
 
     }
 }
@@ -220,4 +249,15 @@ footer {
 
     padding: 15px;
 
+}
+
+.icon-links {
+    color: var(--red-ac);
+    text-decoration: none;
+
+    font-size: var(--icon-description-size);
+    margin-left: 20px;
+    margin-right: 20px;
+
+    transition: transform 0.3s ease-out;
 }
